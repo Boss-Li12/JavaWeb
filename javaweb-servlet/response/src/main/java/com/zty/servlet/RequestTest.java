@@ -14,7 +14,8 @@ public class RequestTest extends HttpServlet {
         System.out.println(username+":"+password);
 
 //重定向时候一定要注意，路径问题，否则404；
-        resp.sendRedirect("/success.jsp");
+//        resp.sendRedirect("/success.jsp");
+        resp.sendRedirect("success.jsp");
     }
 
     @Override

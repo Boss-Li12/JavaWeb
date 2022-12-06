@@ -11,7 +11,7 @@ public class RedirectServlet extends HttpServlet {
         resp.setHeader("Location","/img");
         resp.setStatus(302);
          */
-        resp.sendRedirect("/img");//重定向
+        resp.sendRedirect("img");//重定向
     }
 
     @Override

@@ -10,7 +10,7 @@ public class FileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1. 要获取下载文件的路径
-        String realPath = "D:\\IDEA_Project\\JavaWeb\\javaweb-01-servlet\\response\\target\\classes\\张天泳.jpg";
+        String realPath = "C:\\Users\\Irving\\Desktop\\csLearning\\java\\JavaWeb\\javaweb-servlet\\response\\target\\classes\\张天泳.jpg";
         System.out.println("下载文件的路径："+realPath);
         // 2. 下载的文件名是啥？
         String fileName = realPath.substring(realPath.lastIndexOf("\\") + 1);

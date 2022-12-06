@@ -31,6 +31,7 @@ public class ImageServlet extends HttpServlet {
         resp.setHeader("Cache-control","no-cache");
         resp.setHeader("Pragma","no-cache");
         //把图片写给浏览器
+        ImageIO.setUseCache(false); // 用内存缓存, 若用文件缓存可能会报错cannot create cache file
         ImageIO.write(image, "jpg", resp.getOutputStream());
     }
     //生成随机数
