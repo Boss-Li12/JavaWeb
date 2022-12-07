@@ -36,6 +36,7 @@ public class ImageServlet extends HttpServlet {
     }
     //生成随机数
     private String makeNum(){
+        // test
         Random random = new Random();
         String num = random.nextInt(99999999)+"";
         StringBuffer buffer = new StringBuffer();
