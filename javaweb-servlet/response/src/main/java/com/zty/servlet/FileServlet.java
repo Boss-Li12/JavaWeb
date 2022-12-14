@@ -10,10 +10,13 @@ public class FileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // 1. 要获取下载文件的路径
-        String realPath = "C:\\Users\\Irving\\Desktop\\csLearning\\java\\JavaWeb\\javaweb-servlet\\response\\target\\classes\\张天泳.jpg";
+//        String realPath = "C:\\Users\\Irving\\Desktop\\csLearning\\java\\JavaWeb\\javaweb-servlet\\response\\target\\classes\\张天泳.jpg";
+        String realPath = Thread.currentThread().getContextClassLoader().getResource("").getPath() + "张天泳.jpg";
+//        System.out.println(Thread.currentThread().getContextClassLoader().getResource("").getPath()); // WebContent目录下的文件绝对路径
         System.out.println("下载文件的路径："+realPath);
         // 2. 下载的文件名是啥？
-        String fileName = realPath.substring(realPath.lastIndexOf("\\") + 1);
+        String fileName = realPath.substring(realPath.lastIndexOf("/") + 1);
+        System.out.println(fileName);
         // 3. 设置想办法让浏览器能够支持(Content-Disposition)下载我们需要的东西,中文文件名URLEncoder.encode编码，否则有可能乱码
         resp.setHeader("Content-Disposition","attachment;filename="+ URLEncoder.encode(fileName,"UTF-8"));
         // 4. 获取下载文件的输入流

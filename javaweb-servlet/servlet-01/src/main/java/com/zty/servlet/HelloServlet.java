@@ -6,7 +6,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "Servlet", value = "/Servlet")
+@WebServlet(urlPatterns = "/helloanno")
 public class HelloServlet extends HttpServlet {
     //由于get或者post只是请求实现的方式不同，可以相互调用，业务逻辑都一样！
     @Override

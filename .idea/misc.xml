@@ -5,12 +5,14 @@
     <file type="web" url="file://$PROJECT_DIR$/javaweb-servlet/response" />
     <file type="web" url="file://$PROJECT_DIR$/javaweb-servlet/servlet-01" />
     <file type="web" url="file://$PROJECT_DIR$/javaweb-servlet/servlet-02" />
+    <file type="web" url="file://$PROJECT_DIR$/SMBMS" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Javaweb-Maven/pom.xml" />
         <option value="$PROJECT_DIR$/javaweb-servlet/pom.xml" />
+        <option value="$PROJECT_DIR$/SMBMS/pom.xml" />
       </list>
     </option>
   </component>

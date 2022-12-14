@@ -4,17 +4,18 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
          http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0"
-         metadata-complete="true">
-    <!--注册Servlet-->
-    <servlet>
-        <servlet-name>hello</servlet-name>
-        <servlet-class>com.zty.servlet.HelloServlet</servlet-class>
-    </servlet>
-    <!--Servlet的请求路径-->
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+         metadata-complete="false">
+<!--      metadata-complete = false表示路由不完全，开启注解！  -->
+<!--    注册Servlet-->
+        <servlet>
+            <servlet-name>hello</servlet-name>
+            <servlet-class>com.zty.servlet.HelloServlet</servlet-class>
+        </servlet>
+        <!--Servlet的请求路径-->
+        <servlet-mapping>
+            <servlet-name>hello</servlet-name>
+            <url-pattern>/hello</url-pattern>
+        </servlet-mapping>
 
     <!--404-->
     <servlet>
